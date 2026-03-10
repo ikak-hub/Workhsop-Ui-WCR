@@ -1,0 +1,301 @@
+    /* VARIABEL WARNA — ubah di sini untuk
+       mengubah warna di seluruh halaman */
+    :root {
+      --biru:   #1a9bff;
+      --putih:  #ffffff;
+      --hitam:  #111111;
+      --teks:   #333333;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--teks);
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: var(--biru);
+      padding: 0.75rem 2rem;
+    }
+
+    .search-wrap {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 25px;
+      padding: 0.35rem 1rem;
+      gap: 0.5rem;
+      min-width: 280px;
+    }
+
+    .search-wrap input {
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+      width: 100%;
+      background: transparent;
+      color: #555;
+    }
+
+    .search-wrap i { color: #888; font-size: 0.85rem; }
+
+    .nav-pill {
+      background: white;
+      border-radius: 25px;
+      color: var(--hitam) !important;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 0.4rem 1.2rem !important;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-pill:hover { background: #e8e8e8; }
+
+    .user-btn {
+      width: 40px; height: 40px;
+      background: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #888;
+      font-size: 1.2rem;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* HERO */
+    .hero {
+      background-color: var(--biru);
+      padding: 3.5rem 3rem 0;
+      overflow: hidden;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-quote {
+      font-style: italic;
+      color: rgba(255,255,255,0.92);
+      font-size: 0.93rem;
+      line-height: 1.8;
+      max-width: 400px;
+    }
+
+    .hero-images {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      justify-content: flex-end;
+    }
+
+    /* Gambar arch — melengkung di bawah */
+    .hero-img {
+      width: 47%;
+      max-width: 360px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 200px 200px 0 0;
+      display: block;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    /* SECTION UMUM */
+    .section-title-main {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #666;
+      font-size: 0.88rem;
+      margin-bottom: 2rem;
+    }
+
+    /* NEW COLLECTION */
+    .coll-card img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .coll-card img:hover { transform: scale(1.02); }
+
+    /* KATEGORI BAJU */
+    .kat-card { text-align: center; cursor: pointer; }
+
+    .kat-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s;
+      display: block;
+    }
+    .kat-card:hover img { transform: scale(1.04); }
+
+    .kat-label {
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #222;
+    }
+
+    /*  ARTIKEL */
+    .artikel-container {
+      border: 1.5px solid #ccc;
+      border-radius: 18px;
+      padding: 2rem;
+      background: white;
+    }
+
+    .art-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .art-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.45;
+      margin-bottom: 0.6rem;
+      color: #111;
+    }
+
+    .art-desc {
+      font-size: 0.78rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .see-more {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #111;
+      text-decoration: none;
+      display: block;
+      text-align: right;
+      margin-top: 1.5rem;
+    }
+    .see-more:hover { color: var(--biru); }
+
+    footer {
+      background-color: var(--biru);
+      color: white;
+      padding: 50px 3rem 0;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .footer-sub {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-sosmed-label {
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .sosmed-icon {
+      display: inline-flex;
+      width: 30px; height: 30px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      align-items: center; justify-content: center;
+      color: white;
+      font-size: 0.8rem;
+      text-decoration: none;
+      margin-right: 5px;
+      transition: background 0.2s;
+    }
+    .sosmed-icon:hover { background: rgba(255,255,255,0.4); color: white; }
+
+    .footer-col-title {
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-link {
+      display: block;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-size: 0.83rem;
+      margin-bottom: 0.45rem;
+      transition: color 0.2s;
+    }
+    .footer-link:hover { color: white; text-decoration: underline; }
+
+    .newsletter-wrap { display: flex; max-width: 340px; }
+
+    .newsletter-input {
+      background: white;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      padding: 0.5rem 1rem;
+      font-size: 0.82rem;
+      color: #333;
+      outline: none;
+      flex: 1;
+    }
+
+    .newsletter-btn {
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+    }
+    .newsletter-btn:hover { background: #333; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.22);
+      margin-top: 2.5rem;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .footer-bottom a:hover { color: white; }

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WCR – Wardrobe Costume Rental</title>
+
+    <!-- SAYA INSTALASI BOOTSTRAP 5 via CDN jadi ketika dimasukan link nya maka otomatis sudah menggunakan boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome (ikon sosmed, user, search) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR navbar-expand-lg = responsive, di HP jadi hamburger ☰ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <!-- Search bar kiri -->
+            <div class="search-wrap">
+                <input type="text" placeholder="Cari" />
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- Hamburger (tampil di layar kecil HP) -->
+            <button class="navbar-toggler border-0 ms-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navLinks" style="filter:invert(1)">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Link navigasi -->
+            <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+                <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+                    <a href="#" class="nav-pill">Home</a>
+                    <a href="#koleksi" class="nav-pill">Katalog</a>
+                    <a href="#artikel" class="nav-pill">Artikel</a>
+                    <a href="#" class="nav-pill">Login</a>
+                    <div class="user-btn ms-1">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO Latar biru, teks italic kiri, dua foto arch (lengkung) di kanan -->
+    <section class="hero">
+        <div class="container-fluid">
+            <div class="row align-items-end">
+
+                <!-- Teks kiri -->
+                <div class="col-lg-4 col-md-5 pb-5">
+                    <h1 class="hero-title">Where Imagination<br />Meets Craft</h1>
+                    <p class="hero-quote">
+                        "Wujudkan karakter dan imajinasi Anda melalui koleksi kostum premium kami,<br />
+                        dirancang untuk memperindah setiap momen,<br />
+                        memperkuat tema acara, dan menambah kesan tak terlupakan."
+                    </p>
+                </div>
+
+                <!-- Dua foto kostum berbentuk arch -->
+                <div class="col-lg-8 col-md-7">
+                    <div class="hero-images">
+                        <img class="hero-img"
+                            src="https://i.pinimg.com/736x/4b/14/14/4b141485a6c38c3b4ad9296b53764192.jpg"
+                            alt="Kostum Adat 1" />
+                        <img class="hero-img"
+                            src="https://i.pinimg.com/736x/4b/14/14/4b141485a6c38c3b4ad9296b53764192.jpg"
+                            alt="Kostum Adat 2" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NEW COLLECTION -->
+    <section class="py-5" id="koleksi">
+        <div class="container">
+            <h2 class="section-title-main">NEW COLLECTION</h2>
+            <p class="section-sub">Check Our New Collections</p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="coll-card">
+                        <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=600&q=80"
+                            alt="Gaun Pink" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="coll-card">
+                        <img src="https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=600&q=80"
+                            alt="Cosplay" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="coll-card">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80"
+                            alt="Gaun Navy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ KATEGORI BAJU 4 kartu dengan gambar + label ════ -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title-main mb-4">KATEGORI BAJU</h2>
+
+            <div class="row g-3 justify-content-center">
+                <div class="col-6 col-md-3">
+                    <div class="kat-card">
+                        <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=500&q=80" alt="Baju MC" />
+                        <div class="kat-label">Baju MC / Penyanyi</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kat-card">
+                        <img src="https://i.pinimg.com/736x/92/e7/cc/92e7cc4a49e4a322b6d27fbf2f777370.jpg"
+                            alt="Baju Wisuda" />
+                        <div class="kat-label">Baju Wisuda</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kat-card">
+                        <img src="https://i.pinimg.com/1200x/e4/2a/f7/e42af76064efe2db4cb536e694ad5771.jpg"
+                            alt="Baju Adat" />
+                        <div class="kat-label">Baju Adat</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="kat-card">
+                        <img src="https://i.pinimg.com/1200x/a0/a2/63/a0a26306733546fb2f421c4fc4fe5771.jpg"
+                            alt="Cosplay" />
+                        <div class="kat-label">Cosplay</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ ARTIKEL ══ -->
+    <section class="py-5" id="artikel">
+        <div class="container">
+            <h2 class="section-title-main mb-4">ARTIKEL</h2>
+
+            <div class="artikel-container">
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="art-card">
+                            <img src="https://akcdn.detik.net.id/community/media/visual/2025/10/19/pemkab-banyuwangi-1760856762063.jpeg?w=700&q=90"
+                                alt="Batik Festival" />
+                            <h5 class="art-title">Banyuwangi Batik Festival 2025 Angkat Motif Wader Kesit di Peragaan
+                                Busana</h5>
+                            <p class="art-desc">Motif batik lokal "Wader Kesit" diangkat dalam peragaan busana
+                                Banyuwangi Batik Festival 2025. Kolaborasi desainer dan pengrajin lokal menghasilkan 60
+                                pakaian batik yang menonjolkan kearifan lokal.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="art-card">
+                            <img src="https://cdn.antaranews.com/cache/1200x800/2025/11/11/1000230607.jpg.webp"
+                                alt="Universitas Terbuka" />
+                            <h5 class="art-title">Universitas Terbuka bawa semangat Hari Pahlawan dalam wisuda 2025</h5>
+                            <p class="art-desc">Universitas Terbuka menggelar wisuda Tahun Akademik 2025/2026 di UI
+                                Convention Center, Tangerang Selatan pada 10-11 November 2025. Rektor UT mengajak
+                                wisudawan agar menjadi "pahlawan masa kini" yang menyebarkan manfaat, solusi, dan
+                                perubahan positif di masyarakat. Dalam proses tersebut, terdapat 1766 wisudawan yang
+                                hadir dalam upacara.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="art-card">
+                            <img src="https://unair.ac.id/wp-content/uploads/2019/07/JW-min-1-1024x768.jpg"
+                                alt="Japan World" />
+                            <h5 class="art-title">Japan World</h5>
+                            <p class="art-desc">Himpunan Mahasiswa Studi Kejepangan Fakultas Ilmu Budaya (FIB)
+                                Universitas Airlangga kembali menggelar Japanese World (JW) pada 20-21 Juli 2019
+                                bertempat di FIB UNAIR.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="#" class="see-more">See More.... &gt;</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 
+       FOOTER
+       Latar biru, 4 kolom konten -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row g-4">
+
+                <!-- Brand + Sosmed -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">WCR</div>
+                    <div class="footer-sub">(WARDROBE COSTUME RENTAL)</div>
+                    <div class="footer-sosmed-label">Social Media</div>
+                    <div>
+                        <a href="#" class="sosmed-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="sosmed-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="sosmed-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Shop -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="footer-col-title">SHOP</div>
+                    <a href="#" class="footer-link">Products</a>
+                    <a href="#" class="footer-link">Overview</a>
+                    <a href="#" class="footer-link">Pricing</a>
+                    <a href="#" class="footer-link">Releases</a>
+                </div>
+
+                <!-- Company -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="footer-col-title">COMPANY</div>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">News</a>
+                    <a href="#" class="footer-link">Support</a>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="footer-col-title">STAY UP TO DATE</div>
+                    <div class="newsletter-wrap mt-2">
+                        <input class="newsletter-input" type="email" placeholder="Enter your email" />
+                        <button class="newsletter-btn">SUBMIT</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Terms Privacy Cookies -->
+            <div class="footer-bottom">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
