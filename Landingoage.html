@@ -16,7 +16,7 @@
 
     <!-- Font Awesome (ikon sosmed, user, search) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -158,54 +158,44 @@
     <!-- ══ ARTIKEL ══ -->
     <section class="py-5" id="artikel">
         <div class="container">
-            <h2 class="section-title-main mb-4">ARTIKEL</h2>
+            <h2 class="section-title-main">ARTIKEL</h2>
+            <p class="section-sub">Berita Terkini Seputar Fashion, Kostum &amp; Cosplay</p>
 
+            <!-- Pesan Error untuk API -->
+            <div id="api-notice">
+                ⚠️ <strong>API Key belum diisi!</strong>
+                Buka file HTML ini, cari variabel <code>API_KEY</code> di bagian script,
+                lalu ganti nilainya dengan API key dari <strong>newsapi.org</strong> milikmu.
+            </div>
+
+            <!-- Tab filter topik -->
+            <div class="artikel-tabs">
+                <button class="tab-btn active" data-query="fashion costume">
+                    <i class="fas fa-tshirt me-1"></i> Fashion &amp; Kostum
+                </button>
+                <button class="tab-btn" data-query="cosplay anime">
+                    <i class="fas fa-mask me-1"></i> Cosplay &amp; Anime
+                </button>
+                <button class="tab-btn" data-query="fashion week">
+                    <i class="fas fa-star me-1"></i> Fashion Week
+                </button>
+                <button class="tab-btn" data-query="traditional clothing culture">
+                    <i class="fas fa-globe me-1"></i> Baju Adat &amp; Budaya
+                </button>
+            </div>
+
+            <!-- Area kartu berita -->
             <div class="artikel-container">
-                <div class="row g-4">
-
-                    <div class="col-md-4">
-                        <div class="art-card">
-                            <img src="https://akcdn.detik.net.id/community/media/visual/2025/10/19/pemkab-banyuwangi-1760856762063.jpeg?w=700&q=90"
-                                alt="Batik Festival" />
-                            <h5 class="art-title">Banyuwangi Batik Festival 2025 Angkat Motif Wader Kesit di Peragaan
-                                Busana</h5>
-                            <p class="art-desc">Motif batik lokal "Wader Kesit" diangkat dalam peragaan busana
-                                Banyuwangi Batik Festival 2025. Kolaborasi desainer dan pengrajin lokal menghasilkan 60
-                                pakaian batik yang menonjolkan kearifan lokal.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="art-card">
-                            <img src="https://cdn.antaranews.com/cache/1200x800/2025/11/11/1000230607.jpg.webp"
-                                alt="Universitas Terbuka" />
-                            <h5 class="art-title">Universitas Terbuka bawa semangat Hari Pahlawan dalam wisuda 2025</h5>
-                            <p class="art-desc">Universitas Terbuka menggelar wisuda Tahun Akademik 2025/2026 di UI
-                                Convention Center, Tangerang Selatan pada 10-11 November 2025. Rektor UT mengajak
-                                wisudawan agar menjadi "pahlawan masa kini" yang menyebarkan manfaat, solusi, dan
-                                perubahan positif di masyarakat. Dalam proses tersebut, terdapat 1766 wisudawan yang
-                                hadir dalam upacara.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="art-card">
-                            <img src="https://unair.ac.id/wp-content/uploads/2019/07/JW-min-1-1024x768.jpg"
-                                alt="Japan World" />
-                            <h5 class="art-title">Japan World</h5>
-                            <p class="art-desc">Himpunan Mahasiswa Studi Kejepangan Fakultas Ilmu Budaya (FIB)
-                                Universitas Airlangga kembali menggelar Japanese World (JW) pada 20-21 Juli 2019
-                                bertempat di FIB UNAIR.</p>
-                        </div>
-                    </div>
-
+                <div id="artikel-grid"></div>
+                <div id="artikel-status"></div>
+                <div class="see-more-wrap">
+                    <a href="#" class="see-more" id="see-more-link" style="display:none">
+                        Lihat Semua Berita &gt;
+                    </a>
                 </div>
-
-                <a href="#" class="see-more">See More.... &gt;</a>
             </div>
         </div>
     </section>
-
 
     <!-- 
        FOOTER
@@ -213,8 +203,6 @@
     <footer>
         <div class="container-fluid">
             <div class="row g-4">
-
-                <!-- Brand + Sosmed -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-brand">WCR</div>
                     <div class="footer-sub">(WARDROBE COSTUME RENTAL)</div>
@@ -225,8 +213,6 @@
                         <a href="#" class="sosmed-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-
-                <!-- Shop -->
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="footer-col-title">SHOP</div>
                     <a href="#" class="footer-link">Products</a>
@@ -234,8 +220,6 @@
                     <a href="#" class="footer-link">Pricing</a>
                     <a href="#" class="footer-link">Releases</a>
                 </div>
-
-                <!-- Company -->
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="footer-col-title">COMPANY</div>
                     <a href="#" class="footer-link">About Us</a>
@@ -243,8 +227,6 @@
                     <a href="#" class="footer-link">News</a>
                     <a href="#" class="footer-link">Support</a>
                 </div>
-
-                <!-- Newsletter -->
                 <div class="col-lg-5 col-md-12">
                     <div class="footer-col-title">STAY UP TO DATE</div>
                     <div class="newsletter-wrap mt-2">
@@ -252,10 +234,7 @@
                         <button class="newsletter-btn">SUBMIT</button>
                     </div>
                 </div>
-
             </div>
-
-            <!-- Terms Privacy Cookies -->
             <div class="footer-bottom">
                 <a href="#">Terms</a>
                 <a href="#">Privacy</a>
@@ -266,6 +245,146 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script untuk memuat artikel dari NewsAPI -->
+     <script>
+        const API_KEY = "cca97126138f4b41aa642d66e4c4606a";
+       
+        const JUMLAH_BERITA = 8;
+
+        const BASE_URL = "https://newsapi.org/v2/everything";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (API_KEY === "MASUKKAN_API_KEY_KAMU_DI_SINI" || API_KEY.trim() === "") {
+                document.getElementById("api-notice").style.display = "block";
+                tampilkanError("API Key belum diisi. Silakan isi API Key terlebih dahulu.");
+                return;
+            }
+            const tabAktif = document.querySelector(".tab-btn.active");
+            fetchBerita(tabAktif.dataset.query);
+        });
+
+        document.querySelectorAll(".tab-btn").forEach(btn => {
+            btn.addEventListener("click", function () {
+                document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+                this.classList.add("active");
+                fetchBerita(this.dataset.query);
+            });
+        });
+
+        async function fetchBerita(query) {
+
+            tampilkanSkeleton();
+            document.getElementById("see-more-link").style.display = "none";
+            document.getElementById("artikel-status").innerHTML = "";
+
+            try {
+                const url = `${BASE_URL}` +
+                    `?q=${encodeURIComponent(query)}` +
+                    `&language=en` +
+                    `&sortBy=publishedAt` +
+                    `&pageSize=${JUMLAH_BERITA}` +
+                    `&apiKey=${API_KEY}`;
+
+                const response = await fetch(url);
+
+                const data = await response.json();
+
+                if (data.status !== "ok") {
+                    throw new Error(data.message || "Gagal mengambil data dari News API");
+                }
+
+                if (!data.articles || data.articles.length === 0) {
+                    tampilkanError("Tidak ada berita ditemukan untuk topik ini.");
+                    return;
+                }
+
+                renderBerita(data.articles);
+
+                document.getElementById("artikel-status").innerHTML =
+                    `Menampilkan <span>${data.articles.length}</span> dari <span>${data.totalResults.toLocaleString()}</span> berita`;
+
+                document.getElementById("see-more-link").style.display = "inline";
+
+            } catch (error) {
+                tampilkanError(error.message);
+            }
+        }
+
+        function renderBerita(articles) {
+            const grid = document.getElementById("artikel-grid");
+            grid.innerHTML = ""; 
+
+            articles.forEach(article => {
+                if (!article.title || article.title === "[Removed]") return;
+
+                const tanggal = article.publishedAt
+                    ? new Date(article.publishedAt).toLocaleDateString("id-ID", {
+                        day: "numeric", month: "short", year: "numeric"
+                    })
+                    : "";
+
+                const card = document.createElement("a");
+                card.href        = article.url || "#";
+                card.target      = "_blank";
+                card.rel         = "noopener noreferrer";
+                card.className   = "art-card";
+
+                card.innerHTML = `
+                    ${article.urlToImage
+                        ? `<img class="art-card-img"
+                               src="${article.urlToImage}"
+                               alt="${article.title}"
+                               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />`
+                        : ""
+                    }
+                    <div class="art-img-placeholder"
+                         style="${article.urlToImage ? "display:none" : "display:flex"}">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="art-card-body">
+                        <span class="art-source-badge">${article.source?.name || "News"}</span>
+                        <h5 class="art-title">${article.title}</h5>
+                        <p class="art-desc">${article.description || "Klik untuk membaca artikel selengkapnya."}</p>
+                        <div class="art-meta">
+                            <span class="art-date">
+                                <i class="fas fa-calendar-alt"></i> ${tanggal}
+                            </span>
+                            <span class="art-read-more">Baca &rarr;</span>
+                        </div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        function tampilkanSkeleton() {
+            const grid = document.getElementById("artikel-grid");
+            grid.innerHTML = "";
+            for (let i = 0; i < JUMLAH_BERITA; i++) {
+                grid.innerHTML += `
+                    <div class="skeleton-card">
+                        <div class="skeleton-img"></div>
+                        <div class="skeleton-body">
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line long"></div>
+                            <div class="skeleton-line medium"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>`;
+            }
+        }
+
+        function tampilkanError(pesan) {
+            const grid = document.getElementById("artikel-grid");
+            grid.innerHTML = `
+                <div class="artikel-empty">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p><strong>Oops! Terjadi kesalahan</strong><br>${pesan}</p>
+                </div>`;
+        }
+
+    </script>
 </body>
 
 </html>
